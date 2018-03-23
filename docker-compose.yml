@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+
+  demo:
+    build: demo
+    ports:
+      - "5656:5656"
+
+  prometheus:
+    build: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - "prometheus:/prometheus"
+
+  grafana:
+    build: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - "grafana-data:/var/lib/grafana"
+    environment:
+      - DEBUG=1
+
+volumes:
+    prometheus:
+    grafana-data:

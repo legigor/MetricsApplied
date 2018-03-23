@@ -1,0 +1,3 @@
+- rate(demo_ping_google_requests_total[1m])
+- rate(demo_ping_google_errors_total[1m])
+- histogram_quantile(0.5, rate(demo_ping_google_request_duration_seconds_bucket[1m]))
