@@ -10,8 +10,8 @@ namespace MetricsDemo
 {
     class Program
     {
-        static readonly Counter   requests = Metrics.CreateCounter(  "demo_ping_google_requests_total",           "Total requests");
-        static readonly Counter   errors =   Metrics.CreateCounter(  "demo_ping_google_errors_total",             "Total errors");
+        static readonly Counter   requests = Metrics.CreateCounter(  "demo_ping_google_requests_total", "Total requests");
+        static readonly Counter   errors =   Metrics.CreateCounter(  "demo_ping_google_errors_total", "Total errors");
         static readonly Histogram duration = Metrics.CreateHistogram("demo_ping_google_request_duration_seconds", "Request duration");
 
         static void Main()
